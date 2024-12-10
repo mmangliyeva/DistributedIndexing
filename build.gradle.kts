@@ -21,4 +21,4 @@ application {
 
 tasks.test {
     useJUnitPlatform()
-}s
+}
