@@ -1,4 +1,4 @@
-#Programming Language Compiler
+# Programming Language Compiler
 
 This project implements a simple compiler for a small programming language that supports variable assignment, scope-based variable handling, and printing variable values. It processes commands from a string input file, handles variable assignments within different scopes, and ensures correct handling of nested scopes.
 
