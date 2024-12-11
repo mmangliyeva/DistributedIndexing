@@ -1,4 +1,5 @@
 import java.util.*
+import java.io.File
 
 class Compiler {
 
@@ -83,34 +84,14 @@ class Compiler {
     }
 }
 
-fun main() {
-    val program = """
-        x = 1
-        a = 5
-        print x
-        scope {
-            x = 2
-            print x
-            scope {
-                x = 3
-                y = x
-                x = 4
-                print x
-                print y
-                print a
-            }
-            print x
-            print y
-            print b
-        }
-        print x
-        y = z  
-        print 123 
-        scope }
-        }
-        scope {
-    """.trimIndent()
+fun main(args: Array<String>) {
+    val inputFilePath = args[0]
 
-    val compiler = Compiler()
-    compiler.executeProgram(program)
+    try {
+        val program = File(inputFilePath).readText()
+        val compiler = Compiler()
+        compiler.executeProgram(program)
+    } catch (e: Exception) {
+        println("Error: ${e.message}")
+    }
 }

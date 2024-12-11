@@ -1,0 +1,24 @@
+x = 1
+a = 5
+print x
+scope {
+    x = 2
+    print x
+    scope {
+        x = 3
+        y = x
+        x = 4
+        print x
+        print y
+        print a
+    }
+    print x
+    print y
+    print b
+}
+print x
+y = z
+print 123
+scope }
+}
+scope {

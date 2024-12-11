@@ -1,6 +1,6 @@
-# Simple Scoped Programming Language Compiler
+#Programming Language Compiler
 
-This project implements a simple compiler for a small programming language that supports variable assignment, scope-based variable shadowing, and printing variable values. It processes commands from a string input, handles variable assignments within different scopes, and ensures correct handling of nested scopes.
+This project implements a simple compiler for a small programming language that supports variable assignment, scope-based variable handling, and printing variable values. It processes commands from a string input file, handles variable assignments within different scopes, and ensures correct handling of nested scopes.
 
 ## Features
 
@@ -36,5 +36,5 @@ This project implements a simple compiler for a small programming language that 
 
 3. Run the program:
 ```bash
-./gradlew run
+./gradlew run  --args="./src/main/resources/program.txt"
 ```
